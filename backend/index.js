@@ -3,8 +3,9 @@
 var express = require("express");
 var cors = require("cors");
 var mongoClient = require("mongodb").MongoClient;
+require("dotenv").config()
 
-var constr = "mongodb://localhost:27017";
+var constr = process.env.MONGO_URI
 var app = express();
 app.use(cors());
 
